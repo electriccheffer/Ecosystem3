@@ -63,6 +63,10 @@ public class GridSystem
 		
 	}
 
-
+	
+	public void SetOrigin(Vector3 origin){
+			
+		this.origin = origin; 
+	}
 	
 }
