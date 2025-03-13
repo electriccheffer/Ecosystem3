@@ -35,7 +35,7 @@ public class GridSystem
 			
 			for(int z = 0 ; z < this.height  ; z++){
 			
-					
+				Debug.DrawLine(GetWorldPosition(x,z),GetWorldPosition(x,z) + Vector3.right * 0.2f,Color.white,0.1f);					
 	
 			}
 		
