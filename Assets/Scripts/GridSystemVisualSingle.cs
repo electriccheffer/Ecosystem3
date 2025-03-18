@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class GridSystemVisualSingle : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+	[SerializeField] private MeshRenderer meshRenderer; 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+	public void Show(){
+	
+		meshRenderer.enabled = true; 
+		
+	}
+
+	public void Hide(){
+
+		meshRenderer.enabled = false; 
+		
+	}
+
 }

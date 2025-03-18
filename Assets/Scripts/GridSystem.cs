@@ -29,6 +29,11 @@ public class GridSystem
 
 	}
 
+	public float GetCellSize(){return this.cellSize;}
+	
+	public int GetHeight(){return this.height;}
+
+	public int GetWidth(){return this.width;}
 
 	public void drawDebugLines(){
 		for(int x = 0 ; x < this.width ; x++){
