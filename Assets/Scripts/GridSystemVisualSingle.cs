@@ -3,8 +3,8 @@ using UnityEngine;
 public class GridSystemVisualSingle : MonoBehaviour
 {
 	[SerializeField] private MeshRenderer meshRenderer; 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+	    
+// Start is called once before the first execution of Update after the MonoBehaviour is created
 
 	public void Show(){
 	
@@ -17,5 +17,7 @@ public class GridSystemVisualSingle : MonoBehaviour
 		meshRenderer.enabled = false; 
 		
 	}
+	
 
+ 
 }

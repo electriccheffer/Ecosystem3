@@ -6,13 +6,13 @@ public class GridSystemVisual : MonoBehaviour
 {
     	
 	[SerializeField] protected Transform gridSystemVisualPrefab; 
-	protected GridSystemVisualSingle[,] gridSystemVisualSingleArray; 
+	protected GridDebugObject[,] gridSystemVisualSingleArray; 
 	protected GridSystem gridSystem; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-	gridSystemVisualSingleArray = new GridSystemVisualSingle[gridSystem.GetWidth(),gridSystem.GetHeight()];
+	gridSystemVisualSingleArray = new GridDebugObject[gridSystem.GetWidth(),gridSystem.GetHeight()];
 	
 	for(int x = 0 ; x < gridSystem.GetWidth() ; x++){
 		
@@ -24,8 +24,8 @@ public class GridSystemVisual : MonoBehaviour
 	
 			gridSystemVisualSingleTransform.parent = this.transform; 
 			gridSystemVisualSingleTransform.localScale *= gridSystem.GetCellSize(); 
-			gridSystemVisualSingleArray[x,z] = gridSystemVisualSingleTransform.GetComponent<GridSystemVisualSingle>();  
-			
+			gridSystemVisualSingleArray[x,z] = gridSystemVisualSingleTransform.GetComponent<GridDebugObject>();
+			gridSystemVisualSingleArray[x,z].SetGridObject(this.gridSystem.GetGridObject(x,z));	
 		}
 			
 	} 

@@ -19,4 +19,11 @@ public class GridObject
 		return this.gridPosition; 
 
 	}
+	
+
+	public override string ToString(){
+
+		return this.gridPosition.ToString();
+		
+	}
 }

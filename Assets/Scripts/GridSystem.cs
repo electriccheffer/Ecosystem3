@@ -47,6 +47,12 @@ public class GridSystem
 		}
 	}
 
+
+	public GridObject GetGridObject(int x, int z){
+		
+		return this.gridObjectArray[x,z];
+
+	}
 	
 	public Vector3 GetWorldPosition(GridPosition gridPosition){
 
