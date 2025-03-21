@@ -29,6 +29,11 @@ public class GridSystem
 
 	}
 
+	public float GetCellSize(){return this.cellSize;}
+	
+	public int GetHeight(){return this.height;}
+
+	public int GetWidth(){return this.width;}
 
 	public void drawDebugLines(){
 		for(int x = 0 ; x < this.width ; x++){
@@ -42,6 +47,12 @@ public class GridSystem
 		}
 	}
 
+
+	public GridObject GetGridObject(int x, int z){
+		
+		return this.gridObjectArray[x,z];
+
+	}
 	
 	public Vector3 GetWorldPosition(GridPosition gridPosition){
 
