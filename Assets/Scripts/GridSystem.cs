@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class GridSystem
 {
-	private int width; 
-	private int height; 
-	private float cellSize; 
-	private Vector3 origin; 
-	private GridObject[,] gridObjectArray; 
+	protected int width; 
+	protected int height; 
+	protected float cellSize; 
+	protected Vector3 origin; 
+	protected GridObject[,] gridObjectArray; 
 	
-
+	
+	public GridSystem(){}
+	
 	public GridSystem(int width, int height,float cellSize,Vector3 origin){
 	
 		this.width = width; 

@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class GridObject
 {
-	private GridSystem gridSystem; 
+	protected GridSystem gridSystem; 
 
-	private GridPosition gridPosition; 
+	protected GridPosition gridPosition; 
 
 
 	public GridObject(GridSystem gridSystem,GridPosition gridPosition){
