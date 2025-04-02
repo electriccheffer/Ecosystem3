@@ -22,7 +22,7 @@ public class MazeSystem : GridSystem
 		
 			for(int j = 0 ; j < this.height ; j++){
 				int rand = Random.Range(1,100); 	
-				if(rand  % 3 == 0){
+				if(rand  % 8 == 0){
 				
 					this.gridObjectArray[i,j] = new MazeGridObject(this,
 								     new GridPosition(i,j),
@@ -50,8 +50,8 @@ public class MazeSystem : GridSystem
 		for(int i = 0 ; i < this.width ; i++){
 
 			for(int j = 0 ; j < this.height  ; j++){
-				
-				
+					
+				Debug.Log("Applying rules to maze object at " + i +","+j );	
 				MazeGridObject currentMazeGridObject = 
 						(MazeGridObject)this.gridObjectArray[i,j];
 				bool currentStatus = currentMazeGridObject.GetIsAlive(); 
@@ -88,10 +88,23 @@ public class MazeSystem : GridSystem
 
 		int neighborCount = 0; 
 		int xPosition = position.x; 
-		int zPosition = position.z; 
+		int zPosition = position.z;
+		Debug.Log("Getting neighbors at position:" + xPosition + "," + zPosition ); 
 		int sizeOfNeighborsArray = this.neighborsAddingArray.Length; 
 		foreach(GridPosition neighborPosition in neighborsAddingArray){
 		
+			if(neighborPosition.x + xPosition < 0 
+		           || neighborPosition.z + zPosition < 0){
+				continue; 
+
+			}
+			if(neighborPosition.x + xPosition >= this.width || 
+			   neighborPosition.z + zPosition >= this.height){
+				continue; 
+
+			}
+			
+
 			MazeGridObject neighbor = (MazeGridObject)this.GetGridObject(
 								neighborPosition.x + xPosition,
 								neighborPosition.z + zPosition);
