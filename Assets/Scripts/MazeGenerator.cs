@@ -12,7 +12,6 @@ public class MazeGenerator : MonoBehaviour
     void Start()
     {
 	this.maze = new MazeSystem(100,100,1.0f,new Vector3(0f,0f,0f));	        
-	this.totalIterations = 0; 
 
 	for(;this.totalIterations < this.numberOfIterations;this.totalIterations++){
 		
