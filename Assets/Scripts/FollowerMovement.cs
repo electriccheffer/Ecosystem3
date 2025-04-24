@@ -2,12 +2,12 @@ using UnityEngine;
 using System; 
 using System.Collections.Generic; 
 
-public class PersonalSpace : MonoBehaviour
+public class FollowerMovement : MonoBehaviour
 {
 
-    List<GameObject> tooClose; 
-    [SerializeField] GameObject boid; 
-        
+    GameObject target; 
+    List<GameObject> flock; 	
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,9 +20,22 @@ public class PersonalSpace : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider collision){
-	
-	this.tooClose.Add(collision.gameObject); 
+   void FixedUpdate(){
+
+	if(this.target != null){
+		// follow target
+		// check if too close 
+							
+		// if not move towards 
+		// if so stop
 		
-    }
+
+	}
+	else{
+
+		// follow flock
+	}
+
+   }
+
 }

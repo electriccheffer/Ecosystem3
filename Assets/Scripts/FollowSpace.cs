@@ -20,6 +20,25 @@ public class FollowSpace : MonoBehaviour
 			        
     }
 
+    void FixedUpdate(){
+
+		
+
+    }
+
+    List<GameObject> getFollowObjects(){
+
+	return this.flock; 
+			
+    }
+
+
+    GameObject getTarget(){
+	
+	return this.boid; 
+	
+    }
+
     void OnTriggerEnter(Collider collision){
 
 	if(collision.gameObject.name.StartsWith("FlockingSphere")){
